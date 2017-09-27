@@ -1,25 +1,35 @@
 <md-toolbar color="primary">
   <span>File Uploader</span>
 </md-toolbar>
-<md-card>
-  <md-card-title> Add File </md-card-title>
-  <md-card-content>
-    <form>
-      <md-form-field class="col-3">
-        <input mdInput placeholder="File Name">
-      </md-form-field>
-      <md-form-field class="col-3">
-        <input mdInput placeholder="File Type">
-      </md-form-field>
-      <input type="file" class="col-3">
-      <button class="col-3" md-raised-button class="primary">Save</button>
-    </form>
-  </md-card-content>
-  <md-card-footer> </md-card-footer>
-</md-card>
+
+<md-expansion-panel>
+  <md-expansion-panel-header>
+    <md-panel-title>
+      Upload Files
+    </md-panel-title>
+    <md-panel-description>
+      Type file name and type
+    </md-panel-description>
+  </md-expansion-panel-header>
+
+  <form>
+    <md-form-field class="col-3">
+      <input mdInput placeholder="File Name">
+    </md-form-field>
+    <md-form-field class="col-3">
+      <input mdInput placeholder="File Type">
+    </md-form-field>
+    <input type="file" class="col-3">
+    <button class="col-3" md-raised-button class="primary">Save</button>
+  </form>
+
+</md-expansion-panel>
+
 
 <md-card>
-  <md-card-title> Files List </md-card-title>
+  <md-toolbar color="accent">
+    <md-card-title> Files List </md-card-title>
+  </md-toolbar>
   <md-card-content>
 
     <div class="example-container mat-elevation-z8">
@@ -56,7 +66,5 @@
         <md-row *mdRowDef="let row; columns: displayedColumns;"></md-row>
       </md-table>
     </div>
-
-
   </md-card-content>
 </md-card>
